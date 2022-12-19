@@ -21,7 +21,7 @@ and corruption checks.
 
 %files
 %license LICENSE.txt
-%doc README.md CITATION.rst CITATION.cff CODE_OF_CONDUCT.md CONTRIBUTING.md MAINTENANCE.*
+%doc README.rst AUTHORS.md CITATION.rst CODE_OF_CONDUCT.md CONTRIBUTING.md
 %{python3_sitelib}/pooch
 %{py_puresitedir}/pooch-*.*-info
 
