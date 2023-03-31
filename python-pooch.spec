@@ -1,7 +1,7 @@
 Summary:	A friend to fetch your data files
 Name:		python-pooch
 Version:	1.6.0
-Release:	1
+Release:	2
 Group:		Development/Python
 License:	MIT and Public Domain and APAFML and BSD and (ASL 2.0 and MIT)
 URL:		https://github.com/pdfminer/pdfminer.six
