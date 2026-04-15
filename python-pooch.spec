@@ -1,18 +1,20 @@
-Summary:	A friend to fetch your data files
+%define module pooch
+
 Name:		python-pooch
-Version:	1.8.2
-Release:	3
+Summary:	A friend to fetch your data files
+Version:	1.9.0
+Release:	1
 Group:		Development/Python
 License:	MIT and Public Domain and APAFML and BSD and (ASL 2.0 and MIT)
-URL:		https://github.com/pdfminer/pdfminer.six
-#Source0:	https://github.com/fatiando/pooch/archive/v%{version}/pooch-%{version}.tar.gz
-Source0:	https://pypi.io/packages/source/p/pooch/pooch-%{version}.tar.gz
-BuildRequires:	pkgconfig(python)
-BuildRequires:	python3dist(pip)
-BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(wheel)
+URL:		https://github.com/fatiando/pooch
+Source0:	https://pypi.io/packages/source/p/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
+BuildSystem:	python
 BuildArch:	noarch
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 
 %description
 Pooch manages your Python library's sample data files: it automatically
@@ -21,18 +23,6 @@ and corruption checks.
 
 %files
 %license LICENSE.txt
-%doc README.md AUTHORS.md CITATION.rst CODE_OF_CONDUCT.md CONTRIBUTING.md
-%{python3_sitelib}/pooch
-%{py_puresitedir}/pooch-*.*-info
-
-#--------------------------------------------------------------------
-
-%prep
-%autosetup -n pooch-%{version}
-
-%build
-%py_build
-
-%install
-%py_install
-
+%doc README.md AUTHORS.md CITATION.rst CONTRIBUTING.md
+%{python_sitelib}/%{module}
+%{python_sitelib}/%{module}-%{version}.dist-info
